@@ -1,11 +1,11 @@
 import React from 'react';
 
-const App = () => {
+const TweetFilter = props => {
     return (
         <div>
-            I am the app
+            
         </div>
     );
 }
 
-export default App;
+export default TweetFilter;

@@ -1,0 +1,234 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f8f9f9;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Open Sans", sans-serif, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.tweets-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tweet-search__container {
+    margin: 0 20px;
+}
+
+.tweet-search__container input {
+    margin-bottom: 20px;
+    height: 45px;
+    width: 100%;
+    background-image: url('./images/search_white_24dp.svg');
+    background-repeat: no-repeat;
+    background-position: left 10px center;
+    padding-left: 40px;
+    padding-right: 10px;
+    border: 1px solid #bcc2c5;
+}
+
+a {
+    color: rgba(55, 122, 181);
+    text-decoration: none;
+}
+
+.card-container {
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.05);
+    width: 100%;
+}
+
+.tweet-image-container {
+    height: 39px;
+    width: 39px;
+}
+
+.tweet-image-container img {
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+}
+
+.hashtag-button {
+    height: 32px;
+    border: none;
+    border-radius: 32px;
+    background-color: rgb(231, 243, 250);
+    color: rgba(55, 122, 181)
+}
+
+.hashtag-button span {
+    padding: 10px 15px;
+}
+
+.hashtag-button:hover {
+    cursor: pointer;
+}
+
+.search-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+}
+
+
+.section-title {
+    color: #334750;
+    font-weight: 500;
+}
+
+.hashtag-list-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hashtag-button-container {
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid rgba(55, 122, 181);
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: rgba(55, 122, 181) transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.load-more-container {
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.load-more-button:hover {
+    cursor: pointer;
+}
+
+.load-more-button {
+    color: rgba(55, 122, 181);
+}
+
+.web-hashtag-list {
+    display: none;
+    width: 100%;
+}
+
+.mobile-hashtag-list {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.hashtag-filter-container {
+    padding: 15px 10px;
+}
+
+.mobile-hashtag-list .hashtag-filter-container {
+    width: 100%;
+}
+
+.feed-title {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+@media (min-width: 630px) {
+
+    .tweet-search__container,
+    .search-list-container {
+        width: 555px;
+    }
+
+    .tweets-container {
+        margin: 20px;
+    }
+
+    .mobile-hashtag-list .hashtag-filter-container {
+        width: 555px;
+    }
+
+    .tweet-search__container {
+        margin: 0;
+    }
+
+    .feed-title {
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .load-more-container {
+        width: 100%
+    }
+
+}
+
+@media (min-width: 877px) {
+
+    .web-hashtag-list {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 38px;
+    }
+
+    .mobile-hashtag-list {
+        display: none;
+    }
+
+    .hashtag-filter-container {
+        min-width: 250px;
+        max-width: 300px;
+    }
+
+}

@@ -6,6 +6,20 @@ module.exports = {
     mode: 'development',
     entry: './src/index.js',
     devtool: 'cheap-module-source-map',
+    devServer: {
+        proxy: {
+            "/api": {
+                changeOrigin: true,
+                cookieDomainRewrite: "localhost",
+                target: 'http://localhost:5000',
+                secure: false,
+            },
+            pathRewrite: {
+                '^/api': ''
+             }
+        }
+
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
@@ -42,7 +56,7 @@ module.exports = {
             ]
           },
           {
-            test: /\.(png|jpe?g|gif)$/,
+            test: /\.(png|jpe?g|gif|svg)$/,
             use: ['url-loader?limit=8000&name=images/[name].[ext]']
           }
         ]
