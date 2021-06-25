@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TweetSearch component should match the snapshot 1`] = `"<div class=\\"tweet-search__container\\"><input type=\\"search\\" placeholder=\\"Search by keyword\\" value=\\"\\"/></div>"`;

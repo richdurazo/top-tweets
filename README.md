@@ -1,7 +1,7 @@
 # Top Tweet Challenge
 
 A simple application that integrates with the Tritter API in order to provide an easy way to search Twitter for keywords and retrieve a listing of the top 5 tweets, ordered by most popular, so the trends and hashtags can be monitored.
-#### Server 
+#### Server
 
 Located in the Root directory (*index.js*) simple server build with  [expressJs](https://expressjs.com/) in order to Proxy the Twitter API as this API does not support CORS. 
 
@@ -24,19 +24,32 @@ npm install
 ***Important** -> the server leverages dotenv in order to not expose sensitive information to sorce control. 
 please add a .env file to the root directory with REQUEST_URL and TOKEN
 
+**commands must be run in the root directory**
+
 ### client and server at the same time
 
 ```bash
 npm run dev
 ```
+[http://localhost:8080/](http://localhost:8080/)
 
 ### running server only
 
 ```bash
 npm run server
 ```
+[http://localhost:5000/](http://localhost:5000/)
 ### running client only
 
 ```bash
 npm run client
+```
+[http://localhost:8080/](http://localhost:8080/)
+
+## testing the application
+
+**cd into the client directory**
+
+```bash
+npm run test
 ```
