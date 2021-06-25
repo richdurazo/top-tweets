@@ -10,11 +10,13 @@ Located in the Root directory (*index.js*) simple server build with  [expressJs]
 Located in the client directory and initialized in */src/index.js*. A single page application build on react and webpack. This application leverages the [Twitter API - Standard v1.1](https://developer.twitter.com/en/docs/api-reference-index#twitter-api-v1)
 
 ## Installation
-### Server Installation
+#### Server Installation
 in the root directory run:
 ```bash
 npm install
 ```
+#### Client Installation
+
 then cd into the client directory and run:
 ```bash
 npm install
